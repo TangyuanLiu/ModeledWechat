@@ -13,6 +13,24 @@
 		DEF3CEDA1FF3BDFA00DBBD04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CED91FF3BDFA00DBBD04 /* Assets.xcassets */; };
 		DEF3CEDD1FF3BDFA00DBBD04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CEDB1FF3BDFA00DBBD04 /* LaunchScreen.storyboard */; };
 		DEF3CEE01FF3BDFA00DBBD04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CEDF1FF3BDFA00DBBD04 /* main.m */; };
+		DEF3CF2A1FF3BE7C00DBBD04 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF181FF3BE7C00DBBD04 /* 1.png */; };
+		DEF3CF2B1FF3BE7C00DBBD04 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF191FF3BE7C00DBBD04 /* 10.png */; };
+		DEF3CF2C1FF3BE7C00DBBD04 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF1A1FF3BE7C00DBBD04 /* 11.png */; };
+		DEF3CF2D1FF3BE7C00DBBD04 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF1B1FF3BE7C00DBBD04 /* 12.png */; };
+		DEF3CF2E1FF3BE7C00DBBD04 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF1C1FF3BE7C00DBBD04 /* 13.png */; };
+		DEF3CF2F1FF3BE7C00DBBD04 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF1D1FF3BE7C00DBBD04 /* 14.png */; };
+		DEF3CF301FF3BE7C00DBBD04 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF1E1FF3BE7C00DBBD04 /* 15.png */; };
+		DEF3CF311FF3BE7C00DBBD04 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF1F1FF3BE7C00DBBD04 /* 16.png */; };
+		DEF3CF321FF3BE7C00DBBD04 /* 17.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF201FF3BE7C00DBBD04 /* 17.png */; };
+		DEF3CF331FF3BE7C00DBBD04 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF211FF3BE7C00DBBD04 /* 18.png */; };
+		DEF3CF341FF3BE7C00DBBD04 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF221FF3BE7C00DBBD04 /* 2.png */; };
+		DEF3CF351FF3BE7C00DBBD04 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF231FF3BE7C00DBBD04 /* 3.png */; };
+		DEF3CF361FF3BE7C00DBBD04 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF241FF3BE7C00DBBD04 /* 4.png */; };
+		DEF3CF371FF3BE7C00DBBD04 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF251FF3BE7C00DBBD04 /* 5.png */; };
+		DEF3CF381FF3BE7C00DBBD04 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF261FF3BE7C00DBBD04 /* 6.png */; };
+		DEF3CF391FF3BE7C00DBBD04 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF271FF3BE7C00DBBD04 /* 7.png */; };
+		DEF3CF3A1FF3BE7C00DBBD04 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF281FF3BE7C00DBBD04 /* 8.png */; };
+		DEF3CF3B1FF3BE7C00DBBD04 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF291FF3BE7C00DBBD04 /* 9.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +44,24 @@
 		DEF3CEDC1FF3BDFA00DBBD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEF3CEDE1FF3BDFA00DBBD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF3CEDF1FF3BDFA00DBBD04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DEF3CF181FF3BE7C00DBBD04 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		DEF3CF191FF3BE7C00DBBD04 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		DEF3CF1A1FF3BE7C00DBBD04 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		DEF3CF1B1FF3BE7C00DBBD04 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		DEF3CF1C1FF3BE7C00DBBD04 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
+		DEF3CF1D1FF3BE7C00DBBD04 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
+		DEF3CF1E1FF3BE7C00DBBD04 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
+		DEF3CF1F1FF3BE7C00DBBD04 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
+		DEF3CF201FF3BE7C00DBBD04 /* 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 17.png; sourceTree = "<group>"; };
+		DEF3CF211FF3BE7C00DBBD04 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
+		DEF3CF221FF3BE7C00DBBD04 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		DEF3CF231FF3BE7C00DBBD04 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		DEF3CF241FF3BE7C00DBBD04 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		DEF3CF251FF3BE7C00DBBD04 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		DEF3CF261FF3BE7C00DBBD04 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		DEF3CF271FF3BE7C00DBBD04 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		DEF3CF281FF3BE7C00DBBD04 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		DEF3CF291FF3BE7C00DBBD04 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +94,7 @@
 		DEF3CECF1FF3BDFA00DBBD04 /* 仿微信选择联系人列表 */ = {
 			isa = PBXGroup;
 			children = (
+				DEF3CF161FF3BE6D00DBBD04 /* Resource */,
 				DEF3CED01FF3BDFA00DBBD04 /* AppDelegate.h */,
 				DEF3CED11FF3BDFA00DBBD04 /* AppDelegate.m */,
 				DEF3CED31FF3BDFA00DBBD04 /* ViewController.h */,
@@ -69,6 +106,39 @@
 				DEF3CEDF1FF3BDFA00DBBD04 /* main.m */,
 			);
 			path = "仿微信选择联系人列表";
+			sourceTree = "<group>";
+		};
+		DEF3CF161FF3BE6D00DBBD04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DEF3CF171FF3BE7C00DBBD04 /* portraits */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DEF3CF171FF3BE7C00DBBD04 /* portraits */ = {
+			isa = PBXGroup;
+			children = (
+				DEF3CF181FF3BE7C00DBBD04 /* 1.png */,
+				DEF3CF191FF3BE7C00DBBD04 /* 10.png */,
+				DEF3CF1A1FF3BE7C00DBBD04 /* 11.png */,
+				DEF3CF1B1FF3BE7C00DBBD04 /* 12.png */,
+				DEF3CF1C1FF3BE7C00DBBD04 /* 13.png */,
+				DEF3CF1D1FF3BE7C00DBBD04 /* 14.png */,
+				DEF3CF1E1FF3BE7C00DBBD04 /* 15.png */,
+				DEF3CF1F1FF3BE7C00DBBD04 /* 16.png */,
+				DEF3CF201FF3BE7C00DBBD04 /* 17.png */,
+				DEF3CF211FF3BE7C00DBBD04 /* 18.png */,
+				DEF3CF221FF3BE7C00DBBD04 /* 2.png */,
+				DEF3CF231FF3BE7C00DBBD04 /* 3.png */,
+				DEF3CF241FF3BE7C00DBBD04 /* 4.png */,
+				DEF3CF251FF3BE7C00DBBD04 /* 5.png */,
+				DEF3CF261FF3BE7C00DBBD04 /* 6.png */,
+				DEF3CF271FF3BE7C00DBBD04 /* 7.png */,
+				DEF3CF281FF3BE7C00DBBD04 /* 8.png */,
+				DEF3CF291FF3BE7C00DBBD04 /* 9.png */,
+			);
+			path = portraits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +199,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF3CF3A1FF3BE7C00DBBD04 /* 8.png in Resources */,
+				DEF3CF351FF3BE7C00DBBD04 /* 3.png in Resources */,
+				DEF3CF331FF3BE7C00DBBD04 /* 18.png in Resources */,
+				DEF3CF2B1FF3BE7C00DBBD04 /* 10.png in Resources */,
+				DEF3CF341FF3BE7C00DBBD04 /* 2.png in Resources */,
+				DEF3CF321FF3BE7C00DBBD04 /* 17.png in Resources */,
+				DEF3CF371FF3BE7C00DBBD04 /* 5.png in Resources */,
+				DEF3CF2F1FF3BE7C00DBBD04 /* 14.png in Resources */,
+				DEF3CF2C1FF3BE7C00DBBD04 /* 11.png in Resources */,
+				DEF3CF3B1FF3BE7C00DBBD04 /* 9.png in Resources */,
+				DEF3CF2D1FF3BE7C00DBBD04 /* 12.png in Resources */,
 				DEF3CEDD1FF3BDFA00DBBD04 /* LaunchScreen.storyboard in Resources */,
+				DEF3CF301FF3BE7C00DBBD04 /* 15.png in Resources */,
+				DEF3CF2A1FF3BE7C00DBBD04 /* 1.png in Resources */,
+				DEF3CF381FF3BE7C00DBBD04 /* 6.png in Resources */,
+				DEF3CF311FF3BE7C00DBBD04 /* 16.png in Resources */,
+				DEF3CF361FF3BE7C00DBBD04 /* 4.png in Resources */,
+				DEF3CF2E1FF3BE7C00DBBD04 /* 13.png in Resources */,
 				DEF3CEDA1FF3BDFA00DBBD04 /* Assets.xcassets in Resources */,
 				DEF3CED81FF3BDFA00DBBD04 /* Main.storyboard in Resources */,
+				DEF3CF391FF3BE7C00DBBD04 /* 7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
