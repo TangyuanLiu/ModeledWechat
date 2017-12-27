@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectMemberCollectionCell" id="gTV-IL-0wX" customClass="SelectMemberCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-ft-kRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rp9-ft-kRJ" secondAttribute="height" multiplier="1:1" id="Axk-fF-dOd"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="rp9-ft-kRJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3fD-uu-fAu"/>
+                <constraint firstAttribute="trailing" secondItem="rp9-ft-kRJ" secondAttribute="trailing" id="cJL-Cf-e7D"/>
+                <constraint firstAttribute="bottom" secondItem="rp9-ft-kRJ" secondAttribute="bottom" id="rwn-75-hRg"/>
+                <constraint firstItem="rp9-ft-kRJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vCQ-hi-DGM"/>
+            </constraints>
+            <connections>
+                <outlet property="memberHeadImg" destination="rp9-ft-kRJ" id="eYY-wj-QCz"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

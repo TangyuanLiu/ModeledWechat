@@ -31,6 +31,12 @@
 		DEF3CF391FF3BE7C00DBBD04 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF271FF3BE7C00DBBD04 /* 7.png */; };
 		DEF3CF3A1FF3BE7C00DBBD04 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF281FF3BE7C00DBBD04 /* 8.png */; };
 		DEF3CF3B1FF3BE7C00DBBD04 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF291FF3BE7C00DBBD04 /* 9.png */; };
+		DEF3CF3E1FF3C07200DBBD04 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF3D1FF3C07200DBBD04 /* ListViewController.m */; };
+		DEF3CF441FF3C6D400DBBD04 /* SelectMemberWithSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF431FF3C6D400DBBD04 /* SelectMemberWithSearchView.m */; };
+		DEF3CF481FF3C71C00DBBD04 /* SelectMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF461FF3C71C00DBBD04 /* SelectMemberCollectionCell.xib */; };
+		DEF3CF491FF3C71C00DBBD04 /* SelectMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF471FF3C71C00DBBD04 /* SelectMemberCollectionCell.m */; };
+		DEF3CF4D1FF3CAB300DBBD04 /* SelectContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF4A1FF3CAB300DBBD04 /* SelectContactCell.m */; };
+		DEF3CF4E1FF3CAB300DBBD04 /* SelectContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF4B1FF3CAB300DBBD04 /* SelectContactCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,16 @@
 		DEF3CF271FF3BE7C00DBBD04 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		DEF3CF281FF3BE7C00DBBD04 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		DEF3CF291FF3BE7C00DBBD04 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		DEF3CF3C1FF3C07200DBBD04 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		DEF3CF3D1FF3C07200DBBD04 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		DEF3CF421FF3C6D400DBBD04 /* SelectMemberWithSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMemberWithSearchView.h; sourceTree = "<group>"; };
+		DEF3CF431FF3C6D400DBBD04 /* SelectMemberWithSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMemberWithSearchView.m; sourceTree = "<group>"; };
+		DEF3CF451FF3C71B00DBBD04 /* SelectMemberCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMemberCollectionCell.h; sourceTree = "<group>"; };
+		DEF3CF461FF3C71C00DBBD04 /* SelectMemberCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectMemberCollectionCell.xib; sourceTree = "<group>"; };
+		DEF3CF471FF3C71C00DBBD04 /* SelectMemberCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMemberCollectionCell.m; sourceTree = "<group>"; };
+		DEF3CF4A1FF3CAB300DBBD04 /* SelectContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectContactCell.m; sourceTree = "<group>"; };
+		DEF3CF4B1FF3CAB300DBBD04 /* SelectContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectContactCell.xib; sourceTree = "<group>"; };
+		DEF3CF4C1FF3CAB300DBBD04 /* SelectContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectContactCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +110,17 @@
 		DEF3CECF1FF3BDFA00DBBD04 /* 仿微信选择联系人列表 */ = {
 			isa = PBXGroup;
 			children = (
+				DEF3CF411FF3C6D400DBBD04 /* Utils */,
 				DEF3CF161FF3BE6D00DBBD04 /* Resource */,
 				DEF3CED01FF3BDFA00DBBD04 /* AppDelegate.h */,
 				DEF3CED11FF3BDFA00DBBD04 /* AppDelegate.m */,
 				DEF3CED31FF3BDFA00DBBD04 /* ViewController.h */,
 				DEF3CED41FF3BDFA00DBBD04 /* ViewController.m */,
+				DEF3CF3C1FF3C07200DBBD04 /* ListViewController.h */,
+				DEF3CF3D1FF3C07200DBBD04 /* ListViewController.m */,
+				DEF3CF4C1FF3CAB300DBBD04 /* SelectContactCell.h */,
+				DEF3CF4A1FF3CAB300DBBD04 /* SelectContactCell.m */,
+				DEF3CF4B1FF3CAB300DBBD04 /* SelectContactCell.xib */,
 				DEF3CED61FF3BDFA00DBBD04 /* Main.storyboard */,
 				DEF3CED91FF3BDFA00DBBD04 /* Assets.xcassets */,
 				DEF3CEDB1FF3BDFA00DBBD04 /* LaunchScreen.storyboard */,
@@ -139,6 +161,18 @@
 				DEF3CF291FF3BE7C00DBBD04 /* 9.png */,
 			);
 			path = portraits;
+			sourceTree = "<group>";
+		};
+		DEF3CF411FF3C6D400DBBD04 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DEF3CF421FF3C6D400DBBD04 /* SelectMemberWithSearchView.h */,
+				DEF3CF431FF3C6D400DBBD04 /* SelectMemberWithSearchView.m */,
+				DEF3CF451FF3C71B00DBBD04 /* SelectMemberCollectionCell.h */,
+				DEF3CF471FF3C71C00DBBD04 /* SelectMemberCollectionCell.m */,
+				DEF3CF461FF3C71C00DBBD04 /* SelectMemberCollectionCell.xib */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,11 +239,13 @@
 				DEF3CF2B1FF3BE7C00DBBD04 /* 10.png in Resources */,
 				DEF3CF341FF3BE7C00DBBD04 /* 2.png in Resources */,
 				DEF3CF321FF3BE7C00DBBD04 /* 17.png in Resources */,
+				DEF3CF4E1FF3CAB300DBBD04 /* SelectContactCell.xib in Resources */,
 				DEF3CF371FF3BE7C00DBBD04 /* 5.png in Resources */,
 				DEF3CF2F1FF3BE7C00DBBD04 /* 14.png in Resources */,
 				DEF3CF2C1FF3BE7C00DBBD04 /* 11.png in Resources */,
 				DEF3CF3B1FF3BE7C00DBBD04 /* 9.png in Resources */,
 				DEF3CF2D1FF3BE7C00DBBD04 /* 12.png in Resources */,
+				DEF3CF481FF3C71C00DBBD04 /* SelectMemberCollectionCell.xib in Resources */,
 				DEF3CEDD1FF3BDFA00DBBD04 /* LaunchScreen.storyboard in Resources */,
 				DEF3CF301FF3BE7C00DBBD04 /* 15.png in Resources */,
 				DEF3CF2A1FF3BE7C00DBBD04 /* 1.png in Resources */,
@@ -230,9 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF3CF441FF3C6D400DBBD04 /* SelectMemberWithSearchView.m in Sources */,
+				DEF3CF4D1FF3CAB300DBBD04 /* SelectContactCell.m in Sources */,
 				DEF3CED51FF3BDFA00DBBD04 /* ViewController.m in Sources */,
 				DEF3CEE01FF3BDFA00DBBD04 /* main.m in Sources */,
+				DEF3CF3E1FF3C07200DBBD04 /* ListViewController.m in Sources */,
 				DEF3CED21FF3BDFA00DBBD04 /* AppDelegate.m in Sources */,
+				DEF3CF491FF3C71C00DBBD04 /* SelectMemberCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
