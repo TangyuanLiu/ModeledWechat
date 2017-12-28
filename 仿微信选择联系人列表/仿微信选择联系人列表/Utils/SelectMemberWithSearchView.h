@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConatctModel.h"
 
 @protocol SelectMemberWithSearchViewDelegate <NSObject>
 
-// @TODO
-- (void)removeMemberFromSelectArray:(id)member
+- (void)removeMemberFromSelectArray:(ConatctModel *)member
                           indexPath:(NSIndexPath *)indexPath;
 
 @end

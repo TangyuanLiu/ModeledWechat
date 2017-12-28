@@ -15,7 +15,7 @@
 
 #define kGreenColor [UIColor colorWithRed:1/255.0 green:190/255.0 blue:86/255.0 alpha:1]
 
-@interface ListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ListViewController ()<UITableViewDelegate, UITableViewDataSource, SelectMemberWithSearchViewDelegate>
 {
     NSArray *_rowArr;//row array
     NSArray *_sectionArr;//section array
@@ -24,6 +24,8 @@
 @property (nonatomic, strong) UITableView *indexTableView;
 @property (nonatomic, strong) SelectMemberWithSearchView *searchView;
 @property (nonatomic, strong) NSMutableArray<ConatctModel *> *contactArray;// 模拟数据
+@property (nonatomic, strong) NSMutableArray *selectArray; // 选中的model数组
+@property (nonatomic, strong) UIButton *rightBtn;
 
 
 
@@ -70,6 +72,29 @@
     [self setupSubViews];
 }
 
+#pragma mark -------- target/action --------
+- (void)cancleAct {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)confirmAct {
+    
+    NSMutableArray *nameArray = [NSMutableArray array];
+    for (ConatctModel *model in self.selectArray) {
+        [nameArray addObject:model.name];
+    }
+    
+    NSString *message = [nameArray componentsJoinedByString:@","];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:(UIAlertControllerStyleAlert)];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void)setupBarButtonItems {
     
     UIButton *leftBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -79,18 +104,19 @@
     [leftBtn addTarget:self action:@selector(cancleAct) forControlEvents:(UIControlEventTouchUpInside)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     
-    UIButton *rightBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    rightBtn.frame = CGRectMake(0, 0, 60, 30);
-    [rightBtn setTitle:@"确定" forState:(UIControlStateNormal)];
-    [rightBtn setTitleColor:kGreenColor forState:(UIControlStateNormal)];
-    [rightBtn addTarget:self action:@selector(confirmAct) forControlEvents:(UIControlEventTouchUpInside)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.rightBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    _rightBtn.frame = CGRectMake(0, 0, 60, 30);
+    [_rightBtn setTitle:@"确定" forState:(UIControlStateNormal)];
+    [_rightBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateNormal)];
+//    [_rightBtn addTarget:self action:@selector(confirmAct) forControlEvents:(UIControlEventTouchUpInside)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_rightBtn];
 }
 
 - (void)setupSubViews {
     
     // 头部搜索view
     self.searchView = [[SelectMemberWithSearchView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 52)];
+    _searchView.delegate = self;
     _searchView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_searchView];
     
@@ -163,6 +189,15 @@
         cell.contactNameLabel.text = model.name;
         cell.contactAvatarImg.image = [UIImage imageNamed:model.portrait];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if ([self.selectArray containsObject:model]) {
+            cell.selectedBtn.selected = YES;
+            [cell.selectedBtn setImage:[UIImage imageNamed:@"circle_green"] forState:(UIControlStateSelected)];
+        }else {
+            cell.selectedBtn.selected = NO;
+            [cell.selectedBtn setImage:[UIImage imageNamed:@"circle_empty"] forState:(UIControlStateSelected)];
+        }
+        
         return cell;
     }
     else {
@@ -189,19 +224,51 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (tableView == _listTableView) {
+        ConatctModel *model = _rowArr[indexPath.section][indexPath.row];
+        SelectContactCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.selectedBtn.selected = !cell.selectedBtn.selected;
+        if (cell.selectedBtn.selected == YES) {
+            [cell.selectedBtn setImage:[UIImage imageNamed:@"circle_green"] forState:(UIControlStateSelected)];
+            [self.selectArray addObject:model];
+        }else {
+            [cell.selectedBtn setImage:[UIImage imageNamed:@"circle_empty"] forState:(UIControlStateNormal)];
+            [self.selectArray removeObject:model];
+        }
+        [self updateRightBarButtonItem];
+        [self.searchView updateSubviewsLayout:self.selectArray];
+    }
 }
 
-
-#pragma mark -------- target/action --------
-- (void)cancleAct {
+#pragma mark -------- privite method --------
+- (void)updateRightBarButtonItem {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.selectArray.count > 0) {
+        [_rightBtn setTitle:[NSString stringWithFormat:@"确定(%ld)",self.selectArray.count] forState:(UIControlStateNormal)];
+        [_rightBtn setTitleColor:kGreenColor forState:(UIControlStateNormal)];
+        [_rightBtn addTarget:self action:@selector(confirmAct) forControlEvents:(UIControlEventTouchUpInside)];
+    }
+    else {
+        [_rightBtn setTitle:@"确定" forState:(UIControlStateNormal)];
+        [_rightBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateNormal)];
+    }
+    
+    [_rightBtn sizeToFit];
 }
 
-- (void)confirmAct {
+#pragma mark -------- custome delegate --------
+- (void)removeMemberFromSelectArray:(ConatctModel *)member indexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"确认......");
+    [_contactArray enumerateObjectsUsingBlock:^(ConatctModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if ([obj.name isEqualToString:member.name]) {
+            [self.selectArray removeObject:obj];
+            [_listTableView reloadData];
+            [self updateRightBarButtonItem];
+        }
+    }];
 }
+
 
 #pragma mark -------- lazy init --------
 - (NSMutableArray *)contactArray {
@@ -211,6 +278,20 @@
     }
     
     return _contactArray;
+}
+
+- (NSMutableArray *)selectArray {
+    
+    if (!_selectArray) {
+        _selectArray = [NSMutableArray array];
+    }
+    
+    return _selectArray;
+}
+
+- (void)dealloc {
+    
+    NSLog(@"%@ is deallco",NSStringFromClass([ListViewController class]));
 }
 
 

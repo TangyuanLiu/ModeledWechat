@@ -9,6 +9,7 @@
 #import "SelectMemberWithSearchView.h"
 #import "SelectMemberCollectionCell.h"
 
+
 @interface SelectMemberWithSearchView () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *selectArray;
 
@@ -48,20 +49,20 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     SelectMemberCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SelectMemberCollectionCell class]) forIndexPath:indexPath];
-//    UserVO *model = _selectArray[indexPath.item];
-//    [cell.memberHeadImg sd_setImageWithURL:[NSURL URLWithString:model.user.headPortrait] placeholderImage:nil];
+    ConatctModel *model = _selectArray[indexPath.item];
+    cell.memberHeadImg.image = [UIImage imageNamed:model.portrait];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     // remove the model from selectArray
-//    UserVO *model = _selectArray[indexPath.item];
-//    [_selectArray removeObject:model];
-//
-//    if ([_delegate respondsToSelector:@selector(removeMemberFromSelectArray:indexPath:)]) {
-//        [_delegate removeMemberFromSelectArray:model indexPath:indexPath];
-//    }
+    ConatctModel *model = _selectArray[indexPath.item];
+    [_selectArray removeObject:model];
+
+    if ([_delegate respondsToSelector:@selector(removeMemberFromSelectArray:indexPath:)]) {
+        [_delegate removeMemberFromSelectArray:model indexPath:indexPath];
+    }
     [self updateSubviewsLayout:_selectArray];
 }
 
