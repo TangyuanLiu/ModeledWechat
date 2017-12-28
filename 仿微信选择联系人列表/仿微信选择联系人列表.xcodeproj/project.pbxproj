@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0419E5F84D53E536F7C37F5 /* Pods___________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965C95557083CBD974F4CFAA /* Pods___________.framework */; };
 		DEF3CED21FF3BDFA00DBBD04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CED11FF3BDFA00DBBD04 /* AppDelegate.m */; };
 		DEF3CED51FF3BDFA00DBBD04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CED41FF3BDFA00DBBD04 /* ViewController.m */; };
 		DEF3CED81FF3BDFA00DBBD04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CED61FF3BDFA00DBBD04 /* Main.storyboard */; };
@@ -37,9 +38,15 @@
 		DEF3CF491FF3C71C00DBBD04 /* SelectMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF471FF3C71C00DBBD04 /* SelectMemberCollectionCell.m */; };
 		DEF3CF4D1FF3CAB300DBBD04 /* SelectContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF4A1FF3CAB300DBBD04 /* SelectContactCell.m */; };
 		DEF3CF4E1FF3CAB300DBBD04 /* SelectContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF3CF4B1FF3CAB300DBBD04 /* SelectContactCell.xib */; };
+		DEF3CF511FF484E800DBBD04 /* ConatctModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF501FF484E800DBBD04 /* ConatctModel.m */; };
+		DEF3CF541FF48C1C00DBBD04 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF531FF48C1C00DBBD04 /* DataHelper.m */; };
+		DEF3CF571FF48CBB00DBBD04 /* NSString+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3CF561FF48CBB00DBBD04 /* NSString+Transform.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8620DC90E1876405F7C1E773 /* Pods-仿微信选择联系人列表.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-仿微信选择联系人列表.release.xcconfig"; path = "Pods/Target Support Files/Pods-仿微信选择联系人列表/Pods-仿微信选择联系人列表.release.xcconfig"; sourceTree = "<group>"; };
+		965C95557083CBD974F4CFAA /* Pods___________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFA617E99F256F56CAF8946 /* Pods-仿微信选择联系人列表.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-仿微信选择联系人列表.debug.xcconfig"; path = "Pods/Target Support Files/Pods-仿微信选择联系人列表/Pods-仿微信选择联系人列表.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF3CECD1FF3BDFA00DBBD04 /* 仿微信选择联系人列表.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿微信选择联系人列表.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF3CED01FF3BDFA00DBBD04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEF3CED11FF3BDFA00DBBD04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +85,12 @@
 		DEF3CF4A1FF3CAB300DBBD04 /* SelectContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectContactCell.m; sourceTree = "<group>"; };
 		DEF3CF4B1FF3CAB300DBBD04 /* SelectContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectContactCell.xib; sourceTree = "<group>"; };
 		DEF3CF4C1FF3CAB300DBBD04 /* SelectContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectContactCell.h; sourceTree = "<group>"; };
+		DEF3CF4F1FF484E800DBBD04 /* ConatctModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConatctModel.h; sourceTree = "<group>"; };
+		DEF3CF501FF484E800DBBD04 /* ConatctModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConatctModel.m; sourceTree = "<group>"; };
+		DEF3CF521FF48C1C00DBBD04 /* DataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
+		DEF3CF531FF48C1C00DBBD04 /* DataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
+		DEF3CF551FF48CBB00DBBD04 /* NSString+Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Transform.h"; sourceTree = "<group>"; };
+		DEF3CF561FF48CBB00DBBD04 /* NSString+Transform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Transform.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +98,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0419E5F84D53E536F7C37F5 /* Pods___________.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71C31BA955E2CCE883D0BF83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				965C95557083CBD974F4CFAA /* Pods___________.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DEF3CEC41FF3BDFA00DBBD04 = {
 			isa = PBXGroup;
 			children = (
 				DEF3CECF1FF3BDFA00DBBD04 /* 仿微信选择联系人列表 */,
 				DEF3CECE1FF3BDFA00DBBD04 /* Products */,
+				F0B50F262C4742F36271B673 /* Pods */,
+				71C31BA955E2CCE883D0BF83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +145,12 @@
 				DEF3CF4C1FF3CAB300DBBD04 /* SelectContactCell.h */,
 				DEF3CF4A1FF3CAB300DBBD04 /* SelectContactCell.m */,
 				DEF3CF4B1FF3CAB300DBBD04 /* SelectContactCell.xib */,
+				DEF3CF4F1FF484E800DBBD04 /* ConatctModel.h */,
+				DEF3CF501FF484E800DBBD04 /* ConatctModel.m */,
+				DEF3CF521FF48C1C00DBBD04 /* DataHelper.h */,
+				DEF3CF531FF48C1C00DBBD04 /* DataHelper.m */,
+				DEF3CF551FF48CBB00DBBD04 /* NSString+Transform.h */,
+				DEF3CF561FF48CBB00DBBD04 /* NSString+Transform.m */,
 				DEF3CED61FF3BDFA00DBBD04 /* Main.storyboard */,
 				DEF3CED91FF3BDFA00DBBD04 /* Assets.xcassets */,
 				DEF3CEDB1FF3BDFA00DBBD04 /* LaunchScreen.storyboard */,
@@ -175,6 +205,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F0B50F262C4742F36271B673 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEFA617E99F256F56CAF8946 /* Pods-仿微信选择联系人列表.debug.xcconfig */,
+				8620DC90E1876405F7C1E773 /* Pods-仿微信选择联系人列表.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEF3CEE31FF3BDFA00DBBD04 /* Build configuration list for PBXNativeTarget "仿微信选择联系人列表" */;
 			buildPhases = (
+				96B7726711BB267E0AE9125D /* [CP] Check Pods Manifest.lock */,
 				DEF3CEC91FF3BDFA00DBBD04 /* Sources */,
 				DEF3CECA1FF3BDFA00DBBD04 /* Frameworks */,
 				DEF3CECB1FF3BDFA00DBBD04 /* Resources */,
+				E3286A982A2DF883BE85A48E /* [CP] Embed Pods Frameworks */,
+				A879A70FAB1CF0B21BC2B67A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,17 +303,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		96B7726711BB267E0AE9125D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A879A70FAB1CF0B21BC2B67A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-仿微信选择联系人列表/Pods-仿微信选择联系人列表-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3286A982A2DF883BE85A48E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-仿微信选择联系人列表/Pods-仿微信选择联系人列表-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEF3CEC91FF3BDFA00DBBD04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF3CF541FF48C1C00DBBD04 /* DataHelper.m in Sources */,
 				DEF3CF441FF3C6D400DBBD04 /* SelectMemberWithSearchView.m in Sources */,
 				DEF3CF4D1FF3CAB300DBBD04 /* SelectContactCell.m in Sources */,
 				DEF3CED51FF3BDFA00DBBD04 /* ViewController.m in Sources */,
 				DEF3CEE01FF3BDFA00DBBD04 /* main.m in Sources */,
 				DEF3CF3E1FF3C07200DBBD04 /* ListViewController.m in Sources */,
 				DEF3CED21FF3BDFA00DBBD04 /* AppDelegate.m in Sources */,
+				DEF3CF511FF484E800DBBD04 /* ConatctModel.m in Sources */,
+				DEF3CF571FF48CBB00DBBD04 /* NSString+Transform.m in Sources */,
 				DEF3CF491FF3C71C00DBBD04 /* SelectMemberCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +497,7 @@
 		};
 		DEF3CEE41FF3BDFA00DBBD04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEFA617E99F256F56CAF8946 /* Pods-仿微信选择联系人列表.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -417,6 +511,7 @@
 		};
 		DEF3CEE51FF3BDFA00DBBD04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8620DC90E1876405F7C1E773 /* Pods-仿微信选择联系人列表.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

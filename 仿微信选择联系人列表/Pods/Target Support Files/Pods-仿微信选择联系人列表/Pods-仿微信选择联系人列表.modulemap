@@ -1,0 +1,6 @@
+framework module Pods___________ {
+  umbrella header "Pods-仿微信选择联系人列表-umbrella.h"
+
+  export *
+  module * { export * }
+}

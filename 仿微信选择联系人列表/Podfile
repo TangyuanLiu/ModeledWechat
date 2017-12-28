@@ -1,0 +1,8 @@
+
+platform :ios, '9.0'
+
+target '仿微信选择联系人列表' do
+   use_frameworks!
+   pod 'YYModel', '~> 1.0.4'
+   #pod 'SDWebImage', '~> 3.8.2'
+end
