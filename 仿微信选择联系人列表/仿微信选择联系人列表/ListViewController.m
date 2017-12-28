@@ -26,8 +26,9 @@
 @property (nonatomic, strong) NSMutableArray<ConatctModel *> *contactArray;// 模拟数据
 @property (nonatomic, strong) NSMutableArray *selectArray; // 选中的model数组
 @property (nonatomic, strong) UIButton *rightBtn;
-
-
+@property (nonatomic, strong) UIButton *tipViewBtn;
+@property (nonatomic, assign) NSInteger selectIndex;
+@property (nonatomic, assign) BOOL isScrollToShow;
 
 @end
 
@@ -40,6 +41,8 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.navigationController.navigationBar.translucent = NO;
     
+    self.selectIndex = 1;
+    self.isScrollToShow = YES;
     NSArray *dataArray = @[
                            @{@"portrait":@"1",@"name":@"58"},
                            @{@"portrait":@"2",@"name":@"花无缺"},
@@ -207,12 +210,25 @@
             UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chat_search"]];
             img.center = cell.contentView.center;
             [cell.contentView addSubview:img];
+            cell.textLabel.text = @"";
+            cell.contentView.backgroundColor = [UIColor clearColor];
         }else {
+            
+            if (self.selectIndex == indexPath.row) {
+                cell.contentView.backgroundColor = kGreenColor;
+                cell.textLabel.textColor = [UIColor whiteColor];
+                cell.contentView.layer.cornerRadius = 10;
+                cell.contentView.layer.masksToBounds = YES;
+            }else {
+                cell.contentView.backgroundColor = [UIColor clearColor];
+                cell.textLabel.textColor = [UIColor blackColor];
+            }
+            
             cell.textLabel.text = _sectionArr[indexPath.row];
             cell.textLabel.font = [UIFont systemFontOfSize:14];
-            cell.textLabel.textColor = [UIColor blackColor];
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
         }
+        
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -237,6 +253,14 @@
         }
         [self updateRightBarButtonItem];
         [self.searchView updateSubviewsLayout:self.selectArray];
+    }else {
+        if (indexPath.row != 0) {
+            self.isScrollToShow = NO;
+            self.selectIndex = indexPath.row;
+            [_indexTableView reloadData];
+            [_listTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row-1] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            [self showTipViewWithIndex:indexPath];
+        }
     }
 }
 
@@ -256,6 +280,22 @@
     [_rightBtn sizeToFit];
 }
 
+- (void)showTipViewWithIndex:(NSIndexPath *)indexPath {
+
+    CGFloat y = CGRectGetMinY(_indexTableView.frame) + indexPath.row*20;
+    self.tipViewBtn.frame = CGRectMake(CGRectGetMinX(_indexTableView.frame)-70, y-12, 65, 50);
+    [self.view addSubview:self.tipViewBtn];
+    self.tipViewBtn.titleLabel.font = [UIFont systemFontOfSize:24];
+    NSString *title = _sectionArr[self.selectIndex];
+    [self.tipViewBtn setTitle:title forState:(UIControlStateNormal)];
+    [self performSelector:@selector(dismissTipViewBtn) withObject:nil afterDelay:0.5];
+}
+
+- (void)dismissTipViewBtn {
+    
+    [self.tipViewBtn removeFromSuperview];
+}
+
 #pragma mark -------- custome delegate --------
 - (void)removeMemberFromSelectArray:(ConatctModel *)member indexPath:(NSIndexPath *)indexPath {
     
@@ -269,6 +309,54 @@
     }];
 }
 
+#pragma mark --------   --------
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    if (self.isScrollToShow) {
+        // 获取当前屏幕可见范围的indexPath
+        NSArray *visiblePaths = [_listTableView indexPathsForVisibleRows];
+        
+        if (visiblePaths.count < 1) {
+            return;
+        }
+        
+        NSIndexPath *indexPath0 = visiblePaths[0];
+        NSLog(@"now index is 0000000000 %@", indexPath0);
+        // 判断是否已滑到最底部
+        CGFloat height = scrollView.frame.size.height;
+        CGFloat contentOffsetY = scrollView.contentOffset.y;
+        CGFloat bottomOffset = scrollView.contentSize.height - contentOffsetY;
+        
+        NSIndexPath *indexPath;
+        if (bottomOffset <= height || fabs(bottomOffset - height) < 1) {
+            //在最底部
+            NSInteger row = _sectionArr.count-1;
+            indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+            self.selectIndex = indexPath.row;
+        }else {
+            indexPath = [NSIndexPath indexPathForRow:indexPath0.section inSection:0];
+            self.selectIndex = indexPath.row+1;
+        }
+        
+        [_indexTableView reloadData];
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    // 重置
+    if (!self.isScrollToShow) {
+        self.isScrollToShow = YES;
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    // 重置
+    if (!self.isScrollToShow) {
+        self.isScrollToShow = YES;
+    }
+}
 
 #pragma mark -------- lazy init --------
 - (NSMutableArray *)contactArray {
@@ -287,6 +375,19 @@
     }
     
     return _selectArray;
+}
+
+- (UIButton *)tipViewBtn {
+    
+    if (!_tipViewBtn) {
+        _tipViewBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        _tipViewBtn.enabled = NO;
+        [_tipViewBtn setBackgroundImage:[UIImage imageNamed:@"chat_letterbg"] forState:(UIControlStateNormal)];
+        _tipViewBtn.titleLabel.textColor = [UIColor whiteColor];
+        [_tipViewBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
+    }
+    
+    return _tipViewBtn;
 }
 
 - (void)dealloc {
