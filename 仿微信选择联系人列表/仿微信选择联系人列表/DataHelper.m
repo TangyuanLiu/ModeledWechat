@@ -12,6 +12,13 @@
 #import <UIKit/UIKit.h>
 
 @implementation DataHelper
+
+/**
+ 联系人数组排序
+ 
+ @param array 原始联系人数组数据
+ @return 排序后的联系人数组
+ */
 + (NSMutableArray *) getContactListDataBy:(NSMutableArray *)array{
     
     NSMutableArray *ans = [[NSMutableArray alloc] init];
@@ -70,6 +77,13 @@
     return ans;
 }
 
+
+/**
+ 获取分区数(姓氏首字母)
+
+ @param array 排序后的联系人数组
+ @return [A,B,C,D.....]
+ */
 + (NSMutableArray *)getContactListSectionBy:(NSMutableArray *)array {
     
     NSMutableArray *section = [[NSMutableArray alloc] init];

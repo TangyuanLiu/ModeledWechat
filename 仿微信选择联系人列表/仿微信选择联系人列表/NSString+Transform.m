@@ -9,6 +9,9 @@
 #import "NSString+Transform.h"
 
 @implementation NSString (Transform)
+/**
+ 把姓名转化成拼音且首字母大写
+ */
 - (NSString *)transformCharacter {
     
     NSMutableString *str = [self mutableCopy];
@@ -18,4 +21,5 @@
     
     return [pinYin uppercaseString];
 }
+
 @end

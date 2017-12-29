@@ -280,6 +280,10 @@
     [_rightBtn sizeToFit];
 }
 
+
+/**
+ 显示tipView
+ */
 - (void)showTipViewWithIndex:(NSIndexPath *)indexPath {
 
     CGFloat y = CGRectGetMinY(_indexTableView.frame) + indexPath.row*20;
@@ -321,7 +325,7 @@
         }
         
         NSIndexPath *indexPath0 = visiblePaths[0];
-        NSLog(@"now index is 0000000000 %@", indexPath0);
+
         // 判断是否已滑到最底部
         CGFloat height = scrollView.frame.size.height;
         CGFloat contentOffsetY = scrollView.contentOffset.y;
@@ -329,7 +333,7 @@
         
         NSIndexPath *indexPath;
         if (bottomOffset <= height || fabs(bottomOffset - height) < 1) {
-            //在最底部
+            //在最底部（显示最后一个索引字母）
             NSInteger row = _sectionArr.count-1;
             indexPath = [NSIndexPath indexPathForRow:row inSection:0];
             self.selectIndex = indexPath.row;
